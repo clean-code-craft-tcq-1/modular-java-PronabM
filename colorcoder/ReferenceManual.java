@@ -2,7 +2,7 @@ package colorcoder;
 
 public class ReferenceManual {
 	private String format = "|%1$-10s|%2$-13s|%3$-13s|\n";
-	private String horizontalRule = "-".repeat(40)+"\n";
+	private String horizontalRule = new String(new char[40]).replace("\0", "-")+"\n";
 	public String toString() {
 	    String referenceManual = "\nReference Manual\n" + horizontalRule;
 	    referenceManual += String.format(format, "Pair no.","Major Color","Minor Color") + horizontalRule;
